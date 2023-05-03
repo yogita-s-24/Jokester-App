@@ -18,7 +18,12 @@ img{
 
 .joke{
     text-align: center;
-    color: black;
+    font-family: sans-serif;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    color: red;
+    border: 5px double black;
     font-weight: 500;
     opacity: 0;
 }
