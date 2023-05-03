@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Joke Generator App</title>
     <link rel="stylesheet" href="style.css">
-   
+
 </head>
+
 <body>
     <div class="container">
         <h1>Random Joke Generator</h1>
@@ -17,22 +19,23 @@
     </div>
     <script>
         const btnEl = document.querySelector(".btn");
-const jokeEl = document.querySelector(".joke");
+        const jokeEl = document.querySelector(".joke");
 
-var URL = "https://v2.jokeapi.dev/joke/Any?type=single&amount=1";
+        var URL = "https://v2.jokeapi.dev/joke/Any?type=single&amount=1";
 
-btnEl.addEventListener("click",getMethod);
-async function getMethod(){
-    jokeEl.classList.remove("fade");
+        btnEl.addEventListener("click", getMethod);
+        async function getMethod() {
+            jokeEl.classList.remove("fade");
 
-    const data = await fetch(URL).then((e)=>e.json());
-    if(data){
-        console.log(data);
-        jokeEl.innerHTML = data.joke;
-        jokeEl.classList.add("fade");
-    }
-}
+            const data = await fetch(URL).then((e) => e.json());
+            if (data) {
+                console.log(data);
+                jokeEl.innerHTML = data.joke;
+                jokeEl.classList.add("fade");
+            }
+        }
 
     </script>
 </body>
+
 </html>
